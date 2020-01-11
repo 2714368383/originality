@@ -7,38 +7,37 @@ import com.language.originality.enums.ResultStatusEnum;
  *
  * @author mujinbao
  * @createTime 2018/9/12
- *
  */
 public class ApplicationException extends RuntimeException {
 
-	private int errorCode;
+    private int errorCode;
 
-	private static final long serialVersionUID = 8098760580872738239L;
+    private static final long serialVersionUID = 8098760580872738239L;
 
-	public ApplicationException(String errorMessage) {
-		super(errorMessage);
-	}
+    public ApplicationException(String errorMessage) {
+        super(errorMessage);
+    }
 
-	public ApplicationException(Throwable throwable) {
-		super(throwable);
-	}
+    public ApplicationException(Throwable throwable) {
+        super(throwable);
+    }
 
-	public ApplicationException(String errorMessage, Throwable throwable) {
-		super(errorMessage, throwable);
-	}
+    public ApplicationException(String errorMessage, Throwable throwable) {
+        super(errorMessage, throwable);
+    }
 
-	public ApplicationException(int errorCode, String message) {
-		super(message);
-		this.errorCode = errorCode;
-	}
+    public ApplicationException(int errorCode, String message) {
+        super(message);
+        this.errorCode = errorCode;
+    }
 
-	public ApplicationException(ResultStatusEnum resultStatusEnum) {
-		super(resultStatusEnum.getMessage());
-		this.errorCode = resultStatusEnum.getCode();
-	}
+    public ApplicationException(ResultStatusEnum resultStatusEnum) {
+        super(resultStatusEnum.getMessage());
+        this.errorCode = resultStatusEnum.getCode();
+    }
 
-	public int getErrorCode() {
-		return errorCode;
-	}
+    public int getErrorCode() {
+        return errorCode;
+    }
 
 }

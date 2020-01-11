@@ -1,12 +1,13 @@
-
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
 
 
 mybatis-plus:
-  mapper-locations:
-  - classpath*mybatis/*xml
+  mapper-locations:  classpath*mybatis/*xml
   global-config:
     banner: false
+
+jwt:
+  encryptKey: anNoSW5zdXJhbmNl
+  accessTokenExpireTime: 2
